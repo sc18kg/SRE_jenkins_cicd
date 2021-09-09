@@ -16,6 +16,7 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install nodejs -y
 
 # install pm2
+sudo apt-get install npm
 sudo npm install pm2 -g
 
 sudo apt-get install nginx -y
