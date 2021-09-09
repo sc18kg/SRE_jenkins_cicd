@@ -54,3 +54,17 @@ Once the previous steps has been completed, we are now ready to create the webho
 - Pushes: `enable`
 - Active: `enable`
 - `Add webhook`
+
+### Run app from a new EC2 instance with Jenkins
+Once everything has been set up, We are able to use Jenkins to configure a new EC2 instance using the previous settings and then in the `Execute Shell` use the following code:
+```
+ssh -A -o  "StrictHostKeyChecking=no" ubuntu@ec2-34-244-37-102.eu-west-1.compute.amazonaws.com << EOF
+git clone https://github.com/sc18kg/SRE_jenkins_cicd.git
+cd SRE_jenkins_cicd
+chmod +x environment/app/provision.sh
+./environment/app/provision.sh
+cd app
+export DB_HOST=10.105.2.50:27017/posts
+npm install
+npm start
+```
