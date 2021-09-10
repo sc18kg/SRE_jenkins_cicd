@@ -54,6 +54,10 @@ Once the previous steps has been completed, we are now ready to create the webho
 - Pushes: `enable`
 - Active: `enable`
 - `Add webhook`
+### First Job: Ensuring the Dev branch passes the tests using Jenkins
+
+### Second Job: Merging the dev and main branches once passed tests using Jenkins
+
 
 ### Run app from a new EC2 instance with Jenkins
 Once everything has been set up, We are able to use Jenkins to configure a new EC2 instance using the previous settings and then in the `Execute Shell` use the following code:
